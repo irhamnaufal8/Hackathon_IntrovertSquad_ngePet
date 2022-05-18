@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct ngePetApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
+        
         WindowGroup {
             ContentView()
         }
