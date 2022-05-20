@@ -31,6 +31,7 @@
 		F62F9F2E2830A1BA003E5754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62F9F2D2830A1BA003E5754 /* ContentView.swift */; };
 		F62F9F302830A1C0003E5754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62F9F2F2830A1C0003E5754 /* Assets.xcassets */; };
 		F62F9F332830A1C0003E5754 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62F9F322830A1C0003E5754 /* Preview Assets.xcassets */; };
+		F6B0457F2835014100BCD336 /* CsutomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0457E2835014100BCD336 /* CsutomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		F62F9F2D2830A1BA003E5754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F62F9F2F2830A1C0003E5754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F62F9F322830A1C0003E5754 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F6B0457E2835014100BCD336 /* CsutomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsutomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				F62AC7A92831F2EC000A231A /* DoctorView.swift */,
 				F62AC7AB2831F315000A231A /* ProfileView.swift */,
 				F62AC8F428338D83000A231A /* PetCardView.swift */,
+				F6B0457E2835014100BCD336 /* CsutomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B0457F2835014100BCD336 /* CsutomTextField.swift in Sources */,
 				F62AC7AC2831F315000A231A /* ProfileView.swift in Sources */,
 				F62F9F2E2830A1BA003E5754 /* ContentView.swift in Sources */,
 				F62AC7A42831F29C000A231A /* HomeView.swift in Sources */,

@@ -148,6 +148,7 @@ struct HomeView: View {
                             .cornerRadius(50)
                         }
                         .padding(.horizontal)
+                        .padding(.bottom, 38)
                     }
                 }
             }
