@@ -156,6 +156,8 @@ struct HomeView: View {
                 self.hideKeyboard()
             }
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
     
     private func hideKeyboard() {

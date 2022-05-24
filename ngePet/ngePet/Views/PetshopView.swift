@@ -19,6 +19,8 @@ struct PetshopView: View {
                 }
             }
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 

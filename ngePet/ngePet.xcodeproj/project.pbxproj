@@ -31,6 +31,8 @@
 		F62F9F2E2830A1BA003E5754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62F9F2D2830A1BA003E5754 /* ContentView.swift */; };
 		F62F9F302830A1C0003E5754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62F9F2F2830A1C0003E5754 /* Assets.xcassets */; };
 		F62F9F332830A1C0003E5754 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62F9F322830A1C0003E5754 /* Preview Assets.xcassets */; };
+		F63B167C283CAB8200DB2A3B /* ForumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B167B283CAB8200DB2A3B /* ForumCard.swift */; };
+		F63B167E283CBB4B00DB2A3B /* PostingForumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B167D283CBB4B00DB2A3B /* PostingForumView.swift */; };
 		F6B0457F2835014100BCD336 /* CsutomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0457E2835014100BCD336 /* CsutomTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		F62F9F2D2830A1BA003E5754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F62F9F2F2830A1C0003E5754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F62F9F322830A1C0003E5754 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F63B167B283CAB8200DB2A3B /* ForumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumCard.swift; sourceTree = "<group>"; };
+		F63B167D283CBB4B00DB2A3B /* PostingForumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingForumView.swift; sourceTree = "<group>"; };
 		F6B0457E2835014100BCD336 /* CsutomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsutomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,7 @@
 				F62AC7AB2831F315000A231A /* ProfileView.swift */,
 				F62AC8F428338D83000A231A /* PetCardView.swift */,
 				F6B0457E2835014100BCD336 /* CsutomTextField.swift */,
+				F63B167D283CBB4B00DB2A3B /* PostingForumView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				F62AC8EE28335314000A231A /* DisplayPetshopCard.swift */,
 				F62AC8F028336A24000A231A /* DisplayAdoptCard.swift */,
 				F62AC8F2283383A7000A231A /* AnimalCard.swift */,
+				F63B167B283CAB8200DB2A3B /* ForumCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -342,12 +348,14 @@
 				F62AC7A82831F2C3000A231A /* ForumView.swift in Sources */,
 				F62AC7A62831F2B5000A231A /* PetshopView.swift in Sources */,
 				F62AC8F3283383A7000A231A /* AnimalCard.swift in Sources */,
+				F63B167E283CBB4B00DB2A3B /* PostingForumView.swift in Sources */,
 				F62AC8CC28321583000A231A /* SearchBar.swift in Sources */,
 				F62AC7AA2831F2EC000A231A /* DoctorView.swift in Sources */,
 				F62AC8F528338D83000A231A /* PetCardView.swift in Sources */,
 				F62AC8ED28333A21000A231A /* MiniAnimalCard.swift in Sources */,
 				F62AC8EF28335314000A231A /* DisplayPetshopCard.swift in Sources */,
 				F62AC7AE2831FA53000A231A /* ArticleBadge.swift in Sources */,
+				F63B167C283CAB8200DB2A3B /* ForumCard.swift in Sources */,
 				F62AC8F128336A24000A231A /* DisplayAdoptCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

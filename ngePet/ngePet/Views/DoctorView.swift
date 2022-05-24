@@ -19,6 +19,8 @@ struct DoctorView: View {
                 }
             }
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 

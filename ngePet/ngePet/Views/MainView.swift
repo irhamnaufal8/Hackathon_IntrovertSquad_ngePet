@@ -15,36 +15,40 @@ struct MainView: View {
     }
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image("home.fill")
-                        .font(.system(size: 24))
+        NavigationView {
+            VStack {
+                TabView {
+                    HomeView()
+                        .tabItem {
+                            Image("home.fill")
+                                .font(.system(size: 24))
+                        }
+                    
+                    PetshopView()
+                        .tabItem {
+                            Image(systemName: "cart.fill")
+                        }
+                    
+                    ForumView()
+                        .tabItem {
+                            Image(systemName: "bubble.left.and.bubble.right.fill")
+                        }
+                    
+                    DoctorView()
+                        .tabItem {
+                            Image("medicine.fill")
+                                .font(.system(size: 22))
+                        }
+                    
+                    ProfileView()
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                        }
                 }
-            
-            PetshopView()
-                .tabItem {
-                    Image(systemName: "cart.fill")
-                }
-            
-            ForumView()
-                .tabItem {
-                    Image(systemName: "bubble.left.and.bubble.right.fill")
-                }
-            
-            DoctorView()
-                .tabItem {
-                    Image("medicine.fill")
-                        .font(.system(size: 22))
-                }
-            
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+            }
         }
-        .navigationTitle("")
-        .navigationBarHidden(true)
         .accentColor(Color("Brown"))
     }
 }
