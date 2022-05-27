@@ -6,13 +6,34 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseStorage
+
+class FirebaseManager: NSObject {
+    let auth: Auth
+    let storage: Storage
+    let firestore: Firestore
+    
+    static let shared = FirebaseManager()
+
+    override init() {
+        
+        self.auth = Auth.auth()
+        self.storage = Storage.storage()
+        self.firestore = Firestore.firestore()
+        
+        super.init()
+    }
+}
 
 struct PetCardView: View {
     @Environment(\.editMode) private var editMode
     @State private var disableTextField = true
+    @State var shouldShowImagePicker = false
     @State var jenisRas: String = ""
     @State var jenisKelamin: String = ""
     @State var tanggalLahir: String = ""
+    @State var image: UIImage?
     
     var hewan: String
     var namaHewan: String
@@ -20,14 +41,31 @@ struct PetCardView: View {
     var body: some View {
         ScrollView(showsIndicators: false){
             VStack {
-                ZStack {
-                    Circle()
-                        .foregroundColor(Color("Orange"))
-                        .frame(width: 98, height: 98)
-                    Image("DefaultAvatar")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: 73, maxHeight:62)
+                
+                Button {
+                    shouldShowImagePicker.toggle()
+                } label: {
+                    VStack {
+                        if let image = self.image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 98, height: 98)
+                                .cornerRadius(100)
+                        } else {
+                            ZStack {
+                                Circle()
+                                    .foregroundColor(Color("Orange"))
+                                    .frame(width: 98, height: 98)
+                                Image("DefaultAvatar")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: 73, maxHeight:62)
+                            }
+                        }
+                    }
+                    .overlay(RoundedRectangle(cornerRadius: 100)
+                        .stroke(Color("TextSub"), lineWidth: 1))
                 }
                 
                 Text(namaHewan)
@@ -208,6 +246,9 @@ struct PetCardView: View {
             .cornerRadius(12)
             .padding()
         }
+        .fullScreenCover(isPresented: $shouldShowImagePicker) {
+            ImagePicker(image: $image)
+        }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
@@ -218,7 +259,7 @@ struct PetCardView: View {
                     Spacer()
                     
                     Button {
-                        
+                        editData()
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 16, weight: .medium))
@@ -226,6 +267,31 @@ struct PetCardView: View {
                     }
                     
                 }
+            }
+        }
+    }
+    
+    private func editData() {
+        self.persistImageToStorage()
+    }
+    
+    private func persistImageToStorage() {
+//        let filename = UUID().uuidString
+        guard let uid = FirebaseManager.shared.auth.currentUser?.uid
+            else { return }
+        let ref = FirebaseManager.shared.storage.reference(withPath: uid)
+        guard let imageData = self.image?.jpegData(compressionQuality: 0.5) else { return }
+        ref.putData(imageData, metadata: nil) { metadata, err in
+            if let err = err {
+                print("Failed to push image to storage: \(err)")
+            }
+            
+            ref.downloadURL { url, err in
+                if let err = err {
+                    print("Failed to retrieve downloadURL: \(err)")
+                }
+                
+                print("Successfully stored image with url: \(url?.absoluteString ?? "")")
             }
         }
     }

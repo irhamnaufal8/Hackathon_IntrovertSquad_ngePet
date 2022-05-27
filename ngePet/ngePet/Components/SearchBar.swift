@@ -43,10 +43,13 @@ struct SearchBar: View {
                     })
                 }
                 
-                
-                Image(systemName: "message.fill")
-                    .foregroundColor(.white)
-                    .font(.system(size: 25))
+                NavigationLink {
+                    MessagesListView()
+                } label: {
+                    Image(systemName: "message.fill")
+                        .foregroundColor(.white)
+                        .font(.system(size: 25))
+                }
             }
             .padding()
             .background(Color("Brown"))

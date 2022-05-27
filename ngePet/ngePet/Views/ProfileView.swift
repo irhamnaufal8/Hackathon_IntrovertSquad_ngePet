@@ -8,18 +8,30 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var showSheet: Bool = false
     var body: some View {
             VStack {
                 HStack {
-                    Image(systemName: "person.circle.fill")
-                        .font(.system(size: 40))
-                        .foregroundColor(Color("Blue"))
+                    NavigationLink {
+                        ParentProfileView()
+                    } label: {
+                        Image(systemName: "person.circle.fill")
+                            .font(.system(size: 40))
+                            .foregroundColor(Color("Blue"))
+                    }
                     
                     Spacer()
                     
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 32))
-                        .foregroundColor(Color("Brown"))
+                    Button {
+                        showSheet.toggle()
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.system(size: 32))
+                            .foregroundColor(Color("Brown"))
+                    }
+                    .fullScreenCover(isPresented: $showSheet) {
+                        AddPetView()
+                    }
                 }
                 .padding()
                 

@@ -9,6 +9,11 @@
 		<string>MPLUSRounded1c-Medium.ttf</string>
 		<string>MPLUSRounded1c-Regular.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string>LaunchScreen Logo</string>
+	</dict>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
 </dict>

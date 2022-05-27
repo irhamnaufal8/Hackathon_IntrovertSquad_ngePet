@@ -6,10 +6,23 @@
 //
 
 import SwiftUI
+import Firebase
+import GoogleSignIn
 
 struct ContentView: View {
+    
+    @AppStorage("log_status") var log_status = false
+    
     var body: some View {
-        MainView()
+        
+        VStack {
+            if log_status {
+                MainView()
+            } else {
+                LoginView()
+            }
+        }
+        
     }
 }
 

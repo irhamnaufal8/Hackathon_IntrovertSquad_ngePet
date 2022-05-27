@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct PetshopView: View {
+    
+    @State var adopt = false
+    
     var body: some View {
         VStack {
             SearchBar(text: .constant(""))
                 .background(Color("Brown"))
             
-            ScrollView(showsIndicators: false) {
-                VStack {
-                    
+            Picker(selection: $adopt, label: Text("Picker")) {
+                Text("Belanja")
+                    .tag(false)
+                    .font(Font.custom("RoundedMplus1c-Medium", size: 15))
+                
+                Text("Adopsi")
+                    .font(Font.custom("RoundedMplus1c-Medium", size: 15))
+                    .tag(true)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(.horizontal)
+            
+            VStack {
+                if adopt == false {
+                    BelanjaView()
+                } else {
+                    AdopsiView()
                 }
             }
         }
