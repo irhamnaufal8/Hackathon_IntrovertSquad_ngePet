@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BelanjaView: View {
     
+    @ObservedObject var vm = PetshopViewModel()
+    
     let columns = [
             GridItem(.adaptive(minimum: 173))
         ]
@@ -16,8 +18,12 @@ struct BelanjaView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVGrid(columns: columns, content: {
-                ForEach(0 ..< 10) { i in
-                    BelanjaCard(image: "Wishkas Adult 1.2kg.png")
+                ForEach(vm.petProduct) { product in
+                    NavigationLink {
+                        ProductDetailView(product: product)
+                    } label: {
+                        BelanjaCard(product: product)
+                    }
                 }
             })
         }

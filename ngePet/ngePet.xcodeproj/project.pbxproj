@@ -45,6 +45,24 @@
 		F608DF0128407DDD00432695 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608DEE328407DDD00432695 /* ImagePicker.swift */; };
 		F608DF0228407DDD00432695 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608DEE428407DDD00432695 /* ContentView.swift */; };
 		F608DF052840825800432695 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F608DF042840825800432695 /* SDWebImageSwiftUI */; };
+		F608DF082840AA9A00432695 /* MessagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608DF072840AA9900432695 /* MessagesListViewModel.swift */; };
+		F608DF0A2840B06800432695 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608DF092840B06800432695 /* FirebaseManager.swift */; };
+		F608DF0C2840B52F00432695 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608DF0B2840B52F00432695 /* MessageModel.swift */; };
+		F608DF102840CFB800432695 /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608DF0F2840CFB800432695 /* DoctorListView.swift */; };
+		F608DF122840D02F00432695 /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608DF112840D02F00432695 /* TransactionHistoryView.swift */; };
+		F608DF142840D49500432695 /* CreateNewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608DF132840D49500432695 /* CreateNewMessageViewModel.swift */; };
+		F6455F5E2841163B00B1A92E /* DoctorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6455F5D2841163B00B1A92E /* DoctorCard.swift */; };
+		F6455F602841373C00B1A92E /* MessageRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6455F5F2841373B00B1A92E /* MessageRoomViewModel.swift */; };
+		F6455F622841D59C00B1A92E /* BubbleChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6455F612841D59C00B1A92E /* BubbleChat.swift */; };
+		F6455F642841E1F900B1A92E /* RecentMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6455F632841E1F900B1A92E /* RecentMessageModel.swift */; };
+		F6455F66284226F900B1A92E /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6455F65284226F900B1A92E /* ArticleModel.swift */; };
+		F6455F682842282100B1A92E /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6455F672842282100B1A92E /* ArticleViewModel.swift */; };
+		F6455F6A28422FAC00B1A92E /* PetshopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6455F6928422FAC00B1A92E /* PetshopModel.swift */; };
+		F6455F6C284232E900B1A92E /* PetshopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6455F6B284232E900B1A92E /* PetshopViewModel.swift */; };
+		F6B87E242842DD4B0028C324 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B87E232842DD4B0028C324 /* ProductDetailView.swift */; };
+		F6B87E262842E9D40028C324 /* TransaksiSukses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B87E252842E9D40028C324 /* TransaksiSukses.swift */; };
+		F6B87E282842F1530028C324 /* AdoptDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B87E272842F1520028C324 /* AdoptDetailView.swift */; };
+		F6B87E2A2842F8020028C324 /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B87E292842F8020028C324 /* DoctorDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +108,24 @@
 		F608DEE328407DDD00432695 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F608DEE428407DDD00432695 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F608DF062840832600432695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F608DF072840AA9900432695 /* MessagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListViewModel.swift; sourceTree = "<group>"; };
+		F608DF092840B06800432695 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		F608DF0B2840B52F00432695 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		F608DF0F2840CFB800432695 /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
+		F608DF112840D02F00432695 /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
+		F608DF132840D49500432695 /* CreateNewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewMessageViewModel.swift; sourceTree = "<group>"; };
+		F6455F5D2841163B00B1A92E /* DoctorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCard.swift; sourceTree = "<group>"; };
+		F6455F5F2841373B00B1A92E /* MessageRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRoomViewModel.swift; sourceTree = "<group>"; };
+		F6455F612841D59C00B1A92E /* BubbleChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChat.swift; sourceTree = "<group>"; };
+		F6455F632841E1F900B1A92E /* RecentMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessageModel.swift; sourceTree = "<group>"; };
+		F6455F65284226F900B1A92E /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		F6455F672842282100B1A92E /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		F6455F6928422FAC00B1A92E /* PetshopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetshopModel.swift; sourceTree = "<group>"; };
+		F6455F6B284232E900B1A92E /* PetshopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetshopViewModel.swift; sourceTree = "<group>"; };
+		F6B87E232842DD4B0028C324 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		F6B87E252842E9D40028C324 /* TransaksiSukses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaksiSukses.swift; sourceTree = "<group>"; };
+		F6B87E272842F1520028C324 /* AdoptDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptDetailView.swift; sourceTree = "<group>"; };
+		F6B87E292842F8020028C324 /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +186,7 @@
 				F608DED628407DDD00432695 /* Components */,
 				F608DEE228407DDD00432695 /* Controllers */,
 				F608DEE128407DDD00432695 /* Models */,
-				F608DEC128407DDC00432695 /* Resources */,
+				F608DEC128407DDC00432695 /* Repo */,
 				F608DEC228407DDC00432695 /* ViewModels */,
 				F608DEC528407DDD00432695 /* Views */,
 				F608DEB728407D2B00432695 /* Fonts */,
@@ -180,16 +216,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		F608DEC128407DDC00432695 /* Resources */ = {
+		F608DEC128407DDC00432695 /* Repo */ = {
 			isa = PBXGroup;
 			children = (
+				F608DF092840B06800432695 /* FirebaseManager.swift */,
 			);
-			path = Resources;
+			path = Repo;
 			sourceTree = "<group>";
 		};
 		F608DEC228407DDC00432695 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F608DF072840AA9900432695 /* MessagesListViewModel.swift */,
+				F608DF132840D49500432695 /* CreateNewMessageViewModel.swift */,
+				F6455F5F2841373B00B1A92E /* MessageRoomViewModel.swift */,
+				F6455F672842282100B1A92E /* ArticleViewModel.swift */,
+				F6455F6B284232E900B1A92E /* PetshopViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,6 +255,11 @@
 				F608DED328407DDD00432695 /* PetshopView.swift */,
 				F608DED428407DDD00432695 /* PetCardView.swift */,
 				F608DED528407DDD00432695 /* MessagesListView.swift */,
+				F608DF0F2840CFB800432695 /* DoctorListView.swift */,
+				F608DF112840D02F00432695 /* TransactionHistoryView.swift */,
+				F6B87E232842DD4B0028C324 /* ProductDetailView.swift */,
+				F6B87E272842F1520028C324 /* AdoptDetailView.swift */,
+				F6B87E292842F8020028C324 /* DoctorDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +277,9 @@
 				F608DEDE28407DDD00432695 /* ArticleBadge.swift */,
 				F608DEDF28407DDD00432695 /* AdopsiCard.swift */,
 				F608DEE028407DDD00432695 /* ForumCard.swift */,
+				F6455F5D2841163B00B1A92E /* DoctorCard.swift */,
+				F6455F612841D59C00B1A92E /* BubbleChat.swift */,
+				F6B87E252842E9D40028C324 /* TransaksiSukses.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -237,6 +287,10 @@
 		F608DEE128407DDD00432695 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F608DF0B2840B52F00432695 /* MessageModel.swift */,
+				F6455F632841E1F900B1A92E /* RecentMessageModel.swift */,
+				F6455F65284226F900B1A92E /* ArticleModel.swift */,
+				F6455F6928422FAC00B1A92E /* PetshopModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,14 +429,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B87E282842F1530028C324 /* AdoptDetailView.swift in Sources */,
+				F608DF082840AA9A00432695 /* MessagesListViewModel.swift in Sources */,
+				F6B87E262842E9D40028C324 /* TransaksiSukses.swift in Sources */,
+				F6455F6A28422FAC00B1A92E /* PetshopModel.swift in Sources */,
 				F608DEEE28407DDD00432695 /* HomeView.swift in Sources */,
 				F608DEFF28407DDD00432695 /* AdopsiCard.swift in Sources */,
+				F608DF102840CFB800432695 /* DoctorListView.swift in Sources */,
+				F608DF0C2840B52F00432695 /* MessageModel.swift in Sources */,
 				F608DEF128407DDD00432695 /* MainView.swift in Sources */,
+				F6B87E2A2842F8020028C324 /* DoctorDetailView.swift in Sources */,
 				F608DEF328407DDD00432695 /* AdopsiView.swift in Sources */,
 				F608DEF028407DDD00432695 /* CsutomTextField.swift in Sources */,
 				F608DEF728407DDD00432695 /* DisplayPetshopCard.swift in Sources */,
 				F608DEED28407DDD00432695 /* ParentProfileView.swift in Sources */,
 				F608DEEB28407DDD00432695 /* LoginView.swift in Sources */,
+				F6455F602841373C00B1A92E /* MessageRoomViewModel.swift in Sources */,
+				F6B87E242842DD4B0028C324 /* ProductDetailView.swift in Sources */,
+				F608DF0A2840B06800432695 /* FirebaseManager.swift in Sources */,
 				F608DEE928407DDD00432695 /* ProfileView.swift in Sources */,
 				F608DEF928407DDD00432695 /* MiniAnimalCard.swift in Sources */,
 				F608DEFB28407DDD00432695 /* DisplayAdoptCard.swift in Sources */,
@@ -392,12 +456,20 @@
 				F608DEF428407DDD00432695 /* PetshopView.swift in Sources */,
 				F608DEF828407DDD00432695 /* MessageList.swift in Sources */,
 				F608DEFA28407DDD00432695 /* BelanjaCard.swift in Sources */,
+				F6455F682842282100B1A92E /* ArticleViewModel.swift in Sources */,
+				F6455F6C284232E900B1A92E /* PetshopViewModel.swift in Sources */,
 				F608DF0128407DDD00432695 /* ImagePicker.swift in Sources */,
+				F6455F622841D59C00B1A92E /* BubbleChat.swift in Sources */,
 				F608DF0028407DDD00432695 /* ForumCard.swift in Sources */,
 				F608DEFC28407DDD00432695 /* SearchBar.swift in Sources */,
+				F6455F66284226F900B1A92E /* ArticleModel.swift in Sources */,
+				F608DF142840D49500432695 /* CreateNewMessageViewModel.swift in Sources */,
 				F608DEF528407DDD00432695 /* PetCardView.swift in Sources */,
 				F608DEEA28407DDD00432695 /* MessageRoomView.swift in Sources */,
 				F608DEE728407DDD00432695 /* BelanjaView.swift in Sources */,
+				F6455F642841E1F900B1A92E /* RecentMessageModel.swift in Sources */,
+				F6455F5E2841163B00B1A92E /* DoctorCard.swift in Sources */,
+				F608DF122840D02F00432695 /* TransactionHistoryView.swift in Sources */,
 				F608DEEF28407DDD00432695 /* DoctorView.swift in Sources */,
 				F608DEEC28407DDD00432695 /* AddPetView.swift in Sources */,
 				F608DEFE28407DDD00432695 /* ArticleBadge.swift in Sources */,

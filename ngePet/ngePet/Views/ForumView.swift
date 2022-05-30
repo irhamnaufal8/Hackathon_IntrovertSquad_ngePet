@@ -13,7 +13,6 @@ struct ForumView: View {
         VStack {
             SearchBar(text: .constant(""))
                 .background(Color("Brown"))
-            
             ZStack {
                 ScrollView(showsIndicators: false) {
                     VStack {

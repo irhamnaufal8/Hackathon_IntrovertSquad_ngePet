@@ -9,11 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @ObservedObject var vm = ArticleViewModel()
+    @ObservedObject var ps = PetshopViewModel()
+    @Environment(\.openURL) var openURL
+    
     var body: some View {
         VStack {
             SearchBar(text: .constant(""))
                 .background(Color("Brown"))
-                
             
             ScrollView(showsIndicators: false) {
                 VStack {
@@ -21,9 +24,14 @@ struct HomeView: View {
                     // Artikel
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ArticleBadge()
-                            ArticleBadge()
-                            ArticleBadge()
+                            ForEach(vm.articles) { article in
+                                Button {
+                                    openURL(URL(string: article.link)!)
+                                } label: {
+                                    ArticleBadge(article: article)
+                                }
+
+                            }
                         }
                         .padding(.horizontal)
                     }
@@ -68,12 +76,13 @@ struct HomeView: View {
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
-                                DisplayPetshopCard(image: "Royal Canin Persian Adult.png")
-                                DisplayPetshopCard(image: "Wishkas Adult 1.2kg.png")
-                                DisplayPetshopCard(image: "Royal Canin Persian Adult.png")
-                                DisplayPetshopCard(image: "Wishkas Adult 1.2kg.png")
-                                DisplayPetshopCard(image: "Royal Canin Persian Adult.png")
-                                DisplayPetshopCard(image: "Wishkas Adult 1.2kg.png")
+                                ForEach(ps.petProduct) { product in
+                                    NavigationLink {
+                                        ProductDetailView(product: product)
+                                    } label: {
+                                        DisplayPetshopCard(product: product)
+                                    }
+                                }
                             }
                             .padding(.horizontal)
                         }
@@ -120,12 +129,13 @@ struct HomeView: View {
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
-                                DisplayAdoptCard(image: "Kucing Domestik.png")
-                                DisplayAdoptCard(image: "Kucing Domestik.png")
-                                DisplayAdoptCard(image: "Kucing Domestik.png")
-                                DisplayAdoptCard(image: "Kucing Domestik.png")
-                                DisplayAdoptCard(image: "Kucing Domestik.png")
-                                DisplayAdoptCard(image: "Kucing Domestik.png")
+                                ForEach(ps.petAdopt) { adopt in
+                                    NavigationLink {
+                                        AdoptDetailView(adopt: adopt)
+                                    } label: {
+                                        DisplayAdoptCard(adopt: adopt)
+                                    }
+                                }
                             }
                             .padding(.horizontal)
                         }

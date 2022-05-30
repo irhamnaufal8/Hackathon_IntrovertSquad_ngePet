@@ -17,6 +17,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
                 TabView {
                     HomeView()
                         .tabItem {
@@ -44,6 +45,7 @@ struct MainView: View {
                         .tabItem {
                             Image(systemName: "person.fill")
                         }
+                        .tag("profile")
                 }
                 .navigationBarTitle("")
                 .navigationBarHidden(true)

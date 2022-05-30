@@ -46,13 +46,22 @@ struct ProfileView: View {
                         }
                         
                         NavigationLink {
-                            PetCardView(hewan: "", namaHewan: "Meng")
+                            PetCardView()
                         } label: {
                             AnimalCard(hewan: "kucing", namaHewan: "Meng")
                         }
                         
-                        AnimalCard(hewan: "anjing", namaHewan: "Coco")
-                        AnimalCard(hewan: "burung", namaHewan: "Toto")
+                        NavigationLink {
+                            PetCardView()
+                        } label: {
+                            AnimalCard(hewan: "anjing", namaHewan: "Coco")
+                        }
+                        
+                        NavigationLink {
+                            PetCardView()
+                        } label: {
+                            AnimalCard(hewan: "burung", namaHewan: "Toto")
+                        }
                     }
                 }
             }

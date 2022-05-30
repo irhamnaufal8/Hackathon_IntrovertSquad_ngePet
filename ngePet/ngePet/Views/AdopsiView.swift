@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AdopsiView: View {
+    @ObservedObject var vm = PetshopViewModel()
+    
     let columns = [
             GridItem(.adaptive(minimum: 173))
         ]
@@ -15,8 +17,12 @@ struct AdopsiView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVGrid(columns: columns, content: {
-                ForEach(0 ..< 10) { i in
-                    AdopsiCard(image: "Kucing Domestik.png")
+                ForEach(vm.petAdopt) { adopt in
+                    NavigationLink {
+                        AdoptDetailView(adopt: adopt)
+                    } label: {
+                        AdopsiCard(adopt: adopt)
+                    }
                 }
             })
         }

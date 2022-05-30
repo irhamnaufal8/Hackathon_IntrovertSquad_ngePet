@@ -10,31 +10,21 @@ import SDWebImageSwiftUI
 import Firebase
 
 struct ArticleBadge: View {
-    @State var url = ""
-    var artikelNumber = 1
+    let article: ArticleContent?
+    
     var body: some View {
-        VStack {
-            if url != "" {
-                AnimatedImage(url: URL(string: url)!)
+        ZStack {
+            Loader()
+                .frame(width: 320, height: 134)
+                .background(Color("SoftPurple"))
+                .cornerRadius(30)
+            
+            if article?.imageUrl != "" {
+                WebImage(url: URL(string: article?.imageUrl ?? ""))
+                    .resizable()
+                    .scaledToFit()
                     .frame(width: 320, height: 134)
                     .cornerRadius(20)
-            }
-            else {
-                Loader()
-                    .frame(width: 320, height: 134)
-                    .background(Color("Unselected"))
-                    .cornerRadius(30)
-            }
-        }
-        .onAppear {
-            let storage = Storage.storage().reference()
-            storage.child("artikel\(artikelNumber).png").downloadURL { (url, err) in
-                if err != nil {
-                    print((err?.localizedDescription)!)
-                    return
-                }
-                
-                self.url = "\(url!)"
             }
         }
     }
@@ -49,11 +39,5 @@ struct Loader: UIViewRepresentable {
     
     func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<Loader>) {
         
-    }
-}
-
-struct ArticleBadge_Previews: PreviewProvider {
-    static var previews: some View {
-        ArticleBadge()
     }
 }

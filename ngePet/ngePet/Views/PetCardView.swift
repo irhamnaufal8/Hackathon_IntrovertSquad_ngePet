@@ -9,23 +9,6 @@ import SwiftUI
 import Firebase
 import FirebaseStorage
 
-class FirebaseManager: NSObject {
-    let auth: Auth
-    let storage: Storage
-    let firestore: Firestore
-    
-    static let shared = FirebaseManager()
-
-    override init() {
-        
-        self.auth = Auth.auth()
-        self.storage = Storage.storage()
-        self.firestore = Firestore.firestore()
-        
-        super.init()
-    }
-}
-
 struct PetCardView: View {
     @Environment(\.editMode) private var editMode
     @State private var disableTextField = true
@@ -35,8 +18,8 @@ struct PetCardView: View {
     @State var tanggalLahir: String = ""
     @State var image: UIImage?
     
-    var hewan: String
-    var namaHewan: String
+    var hewan: String = "kucing"
+    var namaHewan: String = "Meng"
     
     var body: some View {
         ScrollView(showsIndicators: false){
@@ -292,14 +275,30 @@ struct PetCardView: View {
                 }
                 
                 print("Successfully stored image with url: \(url?.absoluteString ?? "")")
+                
+                guard let url = url else { return }
+                self.storeUserPetInformation(imageProfileUrl: url)
             }
         }
+    }
+    
+    private func storeUserPetInformation(imageProfileUrl: URL) {
+        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
+        let userPetData = ["uid": uid, "hewan": hewan, "namaHewan": namaHewan, "jenisRas": jenisRas, "jenisKelamin": jenisKelamin, "profileImageUrl": imageProfileUrl.absoluteString]
+        FirebaseManager.shared.firestore.collection("pet")
+            .document(uid).setData(userPetData) { err in
+                if let err = err {
+                    print(err)
+                }
+                
+                print("Success")
+            }
     }
 }
 
 struct PetCardView_Previews: PreviewProvider {
     static var previews: some View {
-        PetCardView(hewan: "kucing", namaHewan: "Meng")
+        PetCardView()
     }
 }
 
